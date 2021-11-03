@@ -1,9 +1,6 @@
 package Table;
 
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.LinkedHashMap;
-
 import UnoLibrary.data;
 
 public class Table {

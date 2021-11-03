@@ -1,7 +1,6 @@
 package Run;
 
 import Table.Table;
-import UnoLibrary.data;
 
 public class Run {
 	public static void main(String args[]) {
