@@ -14,6 +14,10 @@ public class Database {
 		return tables;
 	}
 
+	public void addTable(Table table) {
+		this.tables.add(table);
+	}
+
 	public void setTables(ArrayList<Table> tables) {
 		this.tables = tables;
 	}
