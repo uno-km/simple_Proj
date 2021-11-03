@@ -8,10 +8,10 @@ public class Run {
 		Table table = new Table();
 		table.setTableName("가족"); // 이름정해주기
 
-		data.parseCol("이름/번호/나이/주소");
-
-		table.setColumm(data.parseCol("이름/번호/나이/주소"));
-		System.out.println(table.getColumm());
+		String col = "이름/번호/나이/주소";
+		String data = "김은호/010-4943/28/경기도 성남/";
+		table.setRecRow(col, data);
+		System.out.println(table.getRecRow());
 		data d = new data();
 	}
 }
