@@ -37,6 +37,7 @@ public class Action_dbLoad {
 	}
 
 	static public void showRec(int num, Database db) {
+		showCol(db);
 		for (int i = 0; i < db.getTables().get(num).getColumm().size(); i++) {
 			System.out.print("----------");
 		}
