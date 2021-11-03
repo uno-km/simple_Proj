@@ -11,4 +11,12 @@ public class Unotools {
 		}
 		return col;
 	}
+
+	static public void close(String q) {
+		if (q.equalsIgnoreCase("q")) {
+			System.out.println("프로그램을 정상적으로 종료합니다.");
+			System.exit(0);
+		}
+	}
+
 }

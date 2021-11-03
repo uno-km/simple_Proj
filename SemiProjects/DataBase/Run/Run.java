@@ -1,6 +1,8 @@
 package Run;
 
 import Active.Action_acnt;
+import Active.Action_crud;
+import Active.Action_dbLoad;
 import Database.Database;
 import Table.Table;
 
@@ -24,14 +26,14 @@ public class Run {
 		table.setRecRow(data3);
 
 		Action_acnt.userCheck(db);
-		
-		
-		System.out.println(table.getTableName());
-		System.out.println(table.getColumm());
-		System.out.println("---------------");
-		System.out.println(table.getRecRow().get(0));
-		System.out.println(table.getRecRow().get(1));
-		System.out.println(table.getRecRow().get(2));
+		Action_dbLoad.showTableList(db);
+		Action_dbLoad.showCol(db);
+		int num = Action_dbLoad.choiceTodo(db);
+		if (num == -1) {
+			db.addTable(Action_crud.createTable(db));
+		}
+		Action_dbLoad.showTableList(db);
+//		Action_dbLoad.showRec(num, db);
 
 	}
 
