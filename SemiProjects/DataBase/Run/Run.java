@@ -17,8 +17,7 @@ public class Run {
 			int num = Action_dbLoad.choiceTodo(db); // 동작 입력
 			if (num != -1) { // 구별
 				Action_dbLoad.showRec(num, db); // 해당 번호의 테이블 출력
-			}
-			else {
+			} else {
 				db.addTable(Action_crud.createTable(db)); // 테이블 새로 생성
 			}
 		}

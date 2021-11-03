@@ -18,18 +18,18 @@ public class Action_dbLoad {
 		System.out.println("--------------------------------------");
 	}
 
-	static public void showCol(Database db) {
-		for (int i = 0; i < db.getTables().get(0).getColumm().size(); i++) {
+	static public void showCol(int num, Database db) {
+		for (int i = 0; i < db.getTables().get(num).getColumm().size(); i++) {
 			System.out.print("----------");
 		}
 		System.out.println();
-		for (int i = 0; i < db.getTables().get(0).getColumm().size(); i++) {
+		for (int i = 0; i < db.getTables().get(num).getColumm().size(); i++) {
 			System.out.print("|");
-			System.out.printf("%8s", db.getTables().get(0).getColumm().get(i));
+			System.out.printf("%8s", db.getTables().get(num).getColumm().get(i));
 		}
 		System.out.print("|");
 		System.out.println();
-		for (int i = 0; i < db.getTables().get(0).getColumm().size(); i++) {
+		for (int i = 0; i < db.getTables().get(num).getColumm().size(); i++) {
 			System.out.print("----------");
 		}
 		System.out.println();
@@ -37,7 +37,7 @@ public class Action_dbLoad {
 	}
 
 	static public void showRec(int num, Database db) {
-		showCol(db);
+		showCol(num, db);
 		for (int i = 0; i < db.getTables().get(num).getColumm().size(); i++) {
 			System.out.print("----------");
 		}
