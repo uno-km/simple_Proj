@@ -1,7 +1,7 @@
 package Table;
 
 import java.util.ArrayList;
-import UnoLibrary.data;
+import UnoLibrary.Unotools;
 
 public class Table {
 	private String tableName = "";
@@ -21,7 +21,7 @@ public class Table {
 	}
 
 	public void setColumm(String col) {
-		this.columm = data.parseCol(col);
+		this.columm = Unotools.parseCol(col);
 	}
 
 	public void setColumm(ArrayList<String> columm) {
@@ -33,7 +33,7 @@ public class Table {
 	}
 
 	public void setRecRow(String rec) {
-		this.recRow.add(data.parseCol(rec));
+		this.recRow.add(Unotools.parseCol(rec));
 	}
 
 	public void setRecRow(ArrayList<ArrayList<String>> recRow) {

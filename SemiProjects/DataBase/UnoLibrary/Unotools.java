@@ -2,7 +2,7 @@ package UnoLibrary;
 
 import java.util.ArrayList;
 
-public class data {
+public class Unotools {
 	static public ArrayList<String> parseCol(String input) {
 		String[] strArr = input.split("/");
 		ArrayList<String> col = new ArrayList<String>();
