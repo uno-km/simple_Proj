@@ -1,6 +1,7 @@
 package Table;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.LinkedHashMap;
 
 import UnoLibrary.data;
@@ -8,7 +9,7 @@ import UnoLibrary.data;
 public class Table {
 	private String tableName = "";
 	private ArrayList<String> columm = new ArrayList<String>();
-	private LinkedHashMap<String, String> recRow = new LinkedHashMap<String, String>();
+	private ArrayList<ArrayList<String>> recRow = new ArrayList<ArrayList<String>>();
 
 	public String getTableName() {
 		return tableName;
@@ -22,24 +23,23 @@ public class Table {
 		return columm;
 	}
 
+	public void setColumm(String col) {
+		this.columm = data.parseCol(col);
+	}
+
 	public void setColumm(ArrayList<String> columm) {
 		this.columm = columm;
 	}
 
-	public LinkedHashMap<String, String> getRecRow() {
+	public ArrayList<ArrayList<String>> getRecRow() {
 		return recRow;
 	}
 
-	public void setRecRow(String col, String rec) {
-		for (int i = 0; i < data.parseCol(col).size(); i++) {
-			for (int j = 0; j < data.parseCol(col).size(); j++) {
-				this.recRow.put(data.parseCol(col).get(j), data.parseCol(rec).get(j));
-			}
-		}
+	public void setRecRow(String rec) {
+		this.recRow.add(data.parseCol(rec));
 	}
 
-
-	public void setRecRow(LinkedHashMap<String, String> recRow) {
+	public void setRecRow(ArrayList<ArrayList<String>> recRow) {
 		this.recRow = recRow;
 	}
 }
