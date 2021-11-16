@@ -53,4 +53,10 @@ public class Table {
 	public void setRecRowTest(ArrayList<LinkedHashMap<ArrayList<String>, String>> recRowTest) {
 		this.recRowTest = recRowTest;
 	}
+
+	public void addRecRowTest(ArrayList<LinkedHashMap<ArrayList<String>, String>> recRowTest) {
+		
+		
+		this.recRowTest = recRowTest;
+	}
 }
